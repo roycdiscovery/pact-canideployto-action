@@ -1,0 +1,20 @@
+name: "Can I deploy to a tagged version"
+description: "Checks current participants with this tag are compatible with your new one"
+inputs:
+  broker_url:
+    description: "The url of your pactflow / pact broker"
+    required: true
+  broker_token:
+    description: "Your pact broker token"
+    required: true
+  participant_name:
+    description: "The name of your participant (usually project name)"
+    required: true
+  target_tag:
+    description: "The tag you wish to check (test / stage / prod etc...)"
+    required: true
+runs:
+  using: "composite"
+  steps:
+    - run: ${{ github.action_path }}/canideployTo.sh
+      shell: bash
