@@ -1,4 +1,4 @@
-name: "Can I deploy to a tagged version"
+name: "Can I deploy to a tagged environment?"
 description: "Checks current participants with this tag are compatible with your new one"
 inputs:
   broker_url:
