@@ -5,6 +5,9 @@ PACT_BROKER: $PACT_BROKER
 PACT_BROKER_TOKEN : $PACT_BROKER_TOKEN
 participant_name: $participant_name
 target_tag: $target_tag
+GITHUB_WORKSPACE: $GITHUB_WORKSPACE
+GITHUB_WORKSPACE contents: $(ls $GITHUB_WORKSPACE)
+./ contents: $(ls)
 """
 
 docker run --rm \
