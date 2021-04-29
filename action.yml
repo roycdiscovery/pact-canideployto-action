@@ -1,5 +1,8 @@
 name: "Can I deploy to a tagged environment?"
 description: "Checks current participants with this tag are compatible with your new one"
+branding:
+  icon: "check"
+  color: "green"
 inputs:
   broker_url:
     description: "The url of your pactflow / pact broker"
