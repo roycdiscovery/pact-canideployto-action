@@ -4,12 +4,6 @@ branding:
   icon: "check"
   color: "green"
 inputs:
-  broker_url:
-    description: "The url of your pactflow / pact broker"
-    required: true
-  broker_token:
-    description: "Your pact broker token"
-    required: true
   participant_name:
     description: "The name of your participant (usually project name)"
     required: true
