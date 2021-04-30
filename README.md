@@ -4,7 +4,6 @@ Checks you can deploy based on target tag (usually an environment a partticipant
 
 ## Example
 ```yml
-env:
 # (This just saves defining these multiple times for different pact jobs)
 env:
   participant_name: "my-consumer-app"
