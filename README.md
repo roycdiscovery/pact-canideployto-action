@@ -9,7 +9,7 @@ env:
 env:
   participant_name: "my-consumer-app"
   pact_broker: ${{ secrets.pact_broker }}
-  pact_broker_ttoken: ${{ secrets.pact_broker_token }}
+  pact_broker_token: ${{ secrets.pact_broker_token }}
 
 jobs:
   pact-can-i-deploy:
