@@ -8,8 +8,8 @@ env:
 # (This just saves defining these multiple times for different pact jobs)
 env:
   participant_name: "my-consumer-app"
-  pact_broker: ${{ secrets.PACT_BROKER }}
-  pact_broker_ttoken: ${{ secrets.PACT_BROKER_TOKEN }}
+  pact_broker: ${{ secrets.pact_broker }}
+  pact_broker_ttoken: ${{ secrets.pact_broker_token }}
 
 jobs:
   pact-can-i-deploy:
