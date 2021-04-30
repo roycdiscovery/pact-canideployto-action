@@ -1,5 +1,5 @@
 name: "Can I deploy to a tagged environment?"
-description: "Checks current participants with this tag are compatible with your new one"
+description: "Checks current participants with this tag are compatible with your latest version"
 branding:
   icon: "check"
   color: "green"
