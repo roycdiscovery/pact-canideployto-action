@@ -13,8 +13,14 @@ inputs:
   participant_name:
     description: "The name of your participant (usually project name)"
     required: true
-  target_tag:
-    description: "The tag you wish to check (test / stage / prod etc...)"
+  version:
+    description: "The version of your participant (defaults to latest)"
+    required: false
+  latest:
+    description: "The latest tag value of your participant (i.e. 'test' or 'stage')"
+    required: false
+  to:
+    description: "The tag you wish to deploy to (test / stage / prod etc...)"
     required: true
 runs:
   using: "composite"

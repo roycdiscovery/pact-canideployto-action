@@ -11,10 +11,28 @@ env:
   pact_broker_token: ${{ secrets.PACT_BROKER_TOKEN }}
 
 jobs:
-  pact-can-i-deploy:
+  pact-can-i-deploy-latest:
     runs-on: ubuntu-latest
     steps:
       - uses: roycdiscovery/pact-canideployto-action@v1.0
         env:
-          target_tag: "prod"
+          to: "test"
+  
+  # or ...
+  pact-can-i-deploy-specific:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: roycdiscovery/pact-canideployto-action@v1.0
+        env:
+          version: "1.0.1"
+          to: "test"
+  
+  # or ...
+  pact-can-i-move-upstream:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: roycdiscovery/pact-canideployto-action@v1.0
+        env:
+          latest: "test"
+          to: "stage"
 ```
