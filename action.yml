@@ -1,5 +1,5 @@
 name: "Can I deploy to a tagged environment?"
-description: "Checks current participants with this tag are compatible with your latest version"
+description: "Checks other applications with this tag are compatible with yours"
 branding:
   icon: "check"
   color: "green"
@@ -10,14 +10,14 @@ inputs:
   pact_broker_token:
     description: "Your pact broker token"
     required: true
-  participant_name:
-    description: "The name of your participant (usually project name)"
+  application_name:
+    description: "The name of your application (usually project name)"
     required: true
   version:
-    description: "The version of your participant (defaults to latest)"
+    description: "The version of your application (defaults to latest)"
     required: false
   latest:
-    description: "The latest tag value of your participant (i.e. 'test' or 'stage')"
+    description: "The latest tag value of your application (i.e. 'test' or 'stage')"
     required: false
   to:
     description: "The tag you wish to deploy to (test / stage / prod etc...)"

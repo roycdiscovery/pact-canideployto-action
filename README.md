@@ -1,12 +1,12 @@
 # pact-canideployto-action
 
-Checks you can deploy based on target tag (usually an environment a partticipant has been deployed to).
+Checks you can deploy based on target tag (i.e. an environment name).
 
 ## Example
 ```yml
 # (This just saves defining these multiple times for different pact jobs)
 env:
-  participant_name: "my-consumer-app"
+  application_name: "my-consumer-app"
   pact_broker: ${{ secrets.PACT_BROKER }}
   pact_broker_token: ${{ secrets.PACT_BROKER_TOKEN }}
 
