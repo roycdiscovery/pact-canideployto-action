@@ -10,7 +10,7 @@ VERSION="--latest"
 [ "$version" != "" ] && VERSION="--version $version"
 [ "$latest" != "" ] && VERSION="--latest $latest"
 
-echo "ACTION ENV = pact_broker: $pact_broker, pact_broker_token: $pact_broker_token, participant_name: $participant_name, version flag: '$VERSION', to: $to"
+echo "ACTION ENV = pact_broker: $pact_broker, pact_broker_token: $pact_broker_token, application_name: $application_name, version flag: '$VERSION', to: $to"
 
 
 eval """
@@ -19,7 +19,7 @@ docker run --rm \
  -e PACT_BROKER_TOKEN=$pact_broker_token \
 pactfoundation/pact-cli:latest \
 broker can-i-deploy \
---pacticipant "$participant_name" \
+--pacticipant "$application_name" \
 $VERSION \
 --to $to
 """
